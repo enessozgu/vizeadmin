@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "panel";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Sidebar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 20px;
+        }
+
+            .sidebar a {
+                padding: 10px;
+                text-decoration: none;
+                color: white;
+                display: block;
+                transition: background-color 0.3s;
+            }
+
+                .sidebar a:hover {
+                    background-color: #555;
+                }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="@Url.Action("Index", "login")">Öğrenciler</a>
+
+        <a href="@Url.Action("akademisyenler", "login")">Akademisyenler</a>
+        <a href="@Url.Action("idari", "login")">idari</a>
+        <a href="#">Raporlar</a>
+    </div>
+
+    <div class="">
+        <h2 style="margin-left:450px;">Sivrihisar Meslek Yüksek Okulu</h2>
+        <img style="margin-left:180px;" src="~/fonts/image/smyo.jpg" alt="smyo">
+        
+    </div>
+
+</body>
+
+</html>

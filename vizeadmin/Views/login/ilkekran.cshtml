@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giriş Ekranı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sivrihisar Meslek Yüksek Okulu</h2>
+        <img style="margin-left:50px;" src="~/fonts/image/smyo.jpg" alt="smyo" width="800px;">
+
+        <p>Lütfen giriş yapmak istediğiniz kullanıcı türünü seçin:</p>
+        <a href="@Url.Action("girisogrenci", "login")" class="button">Öğrenci Girişi</a>
+        <a href="@Url.Action("login", "login")" class="button">Personel Girişi</a>
+    </div>
+
+</body>
+</html>

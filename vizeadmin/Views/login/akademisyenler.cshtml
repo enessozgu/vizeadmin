@@ -1,0 +1,38 @@
+﻿@using vizeadmin.Models.Entity;
+@model List<akademisyen>
+@{
+    ViewBag.Title = "akademisyenler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>Akademisyen Adı</th>
+        <th>Akademisyen Soyadı</th>
+        <th>Akademisyen Bölüm</th>
+
+
+
+
+    </tr>
+    <tbody>
+        @foreach (var ogr in Model)
+        {
+            <tr>
+                <td>@ogr.akademisyen_ad</td>
+                <td>@ogr.akademisyen_soyad</td>
+                <td>@ogr.akademisyen_bolum</td>
+
+
+                <td>
+                    <a href="~/login/Sil/@ogr.akademisyen_id" class="btn btn-danger">Sil</a>
+                    <a href="~/Ogrenci/OgrenciGetir/@ogr.akademisyen_id" class="btn btn-success">Guncelle</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
